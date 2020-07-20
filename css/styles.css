@@ -10,7 +10,7 @@ body, h1, a{
 
 body{
 	font-family:"Rubik",Arial,sans-serif;
-	background:#f7f7f7;
+	background:radial-gradient(circle,#3A506B,#3A506B 5%,#0B132B);
 }
 
 a{
@@ -22,13 +22,13 @@ img{
 	max-width:100%;
 }
 
-/* Estilos */
-h1{
-	font-weight:normal;
-	font-style:italic;
-	color:#222;
+/* General Styles */
+.introduction{
 	max-width:960px;
-	margin:0 auto;
+	color:white;
+	margin:60px auto;
+	padding:0 15px 30px 15px;
+	border-bottom:4px solid #aaa;
 }
 
 .github-links{
@@ -36,9 +36,10 @@ h1{
 	margin:0 auto;
 	padding:50px 0;
 
-	display:flex;
-	flex-wrap:wrap;
-	align-items:center;
+	display:grid;
+	grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
+	justify-items:center;
+	grid-gap:30px;
 }
 
 .project-container{
@@ -49,17 +50,27 @@ h1{
 	max-width:450px;
 	margin:0 15px;
 	padding:15px;
+	background:#1C2541;
+	border:5px solid #5BC0BE;
+}
 
-	flex:1 1 280px;
+.project-title{
+	font-size:2em;
+	font-weight:400;
+	color:white;
+	text-align:center;
+	border-bottom:2px solid #ccc;
+	padding-bottom:15px;
 }
 
 .project-print{
 	margin:20px 0;
+	filter:grayscale(80%) blur(2px);
+
+	transition:0.5s ease-in;
 }
 
-.project-link{
-	font-size:2.25em;
-	color:#a4a4a4;
-	display:block;
+.project-print:hover{
+	filter:none;
 }
 

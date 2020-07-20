@@ -16,8 +16,12 @@ fetch(getRequestGithub)
 		const link = document.createElement('a')
 		const div = document.createElement('div')
 		const img = document.createElement('img')
-		
+		const h1 = document.createElement('h1')
+
 		div.classList.add('project-container')
+
+		h1.innerHTML = content.name.toUpperCase()
+		h1.classList.add('project-title')
 
 		img.src=imgSrcs[index]
 		img.alt=content.name
@@ -25,9 +29,8 @@ fetch(getRequestGithub)
 
 		link.classList.add('project-link')
 		link.href = `https://rodrigaumm.github.io/Projects/${content.name}/index.html`
-		link.innerHTML += content.name
-
 		
+		link.appendChild(h1)
 		link.appendChild(img)
 		div.appendChild(link)
 		section.appendChild(div)
