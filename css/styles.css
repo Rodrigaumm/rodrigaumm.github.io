@@ -54,6 +54,7 @@ img {
   margin: 0 15px;
   background: #1c2541;
   border: 5px solid #5bc0be;
+  border-radius: 15px;
 
   transform: translateY(0px);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
